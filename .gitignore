@@ -4,6 +4,11 @@
 /node_modules
 /.pnp
 .pnp.js
+firebase.json
+firebase-hosting-pull-request.yml
+.firebase
+.firebaserc
+.github
 
 # testing
 /coverage

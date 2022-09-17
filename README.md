@@ -189,7 +189,7 @@ It contains useful links users may need it.
 
 # Live Demo
 
-***Take a look on the live version here:*** https://react-netflix-clone-red.vercel.app/ :octocat: :heart_eyes: 
+***Take a look on the live version here:***   https://netflix-clone-8873a.web.app/
 
 
 # Technology Used
@@ -221,7 +221,7 @@ To be able to use this react app locally in a development environment you will n
 
 1) You will need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) installed on your computer.
 
-2) You will need an account on [Firebase](https://firebase.com) and you should create a project on your firebase account dedicated to this Netflix project.
+2) You will need an account on [Firebase](https://firebase.com) and [tmdb](https://www.themoviedb.org/) and you should create a project on your firebase account dedicated to this Netflix project.
 
 3) You will need the "./seed.js" file (which I added in this repo) to seed your firebase backend with movies information. OR you can use your seed file with your information if you want.
 
@@ -229,10 +229,10 @@ To be able to use this react app locally in a development environment you will n
 
 ```cmd
 # Clone this repository
-git clone https://github.com/AhmedTohamy01/React-Netflix-Clone
+git clone https://github.com/Realgorithm/React-Netflix-Clone-master
 
 # Go into the repository
-cd react-netflix-clone
+cd react-netflix-clone-master-master
 
 # Install dependencies
 npm install 
@@ -298,8 +298,27 @@ const config = {
    firebase database.
  
 ```
+8) you should go to the [tmdb](https://www.themoviedb.org/) website and create an account and get an API key.
 
-8) After seeding your firebase database with the movies information & reverting the Github Pages changes you can run the Netflix React App using the following command from your terminal:
+9) then you will go to the request.js file in the ./src/lib folder and replace the API key with your API key.
+
+```js
+const API_KEY = "Get your own API key from https://www.themoviedb.org/";
+
+const requests = {
+  fetchTrending: `/trending/all/week?api_key=${API_KEY}&language=en-US`,
+  fetchNetflixOriginals: `/discover/tv?api_key=${API_KEY}&with_networks=213`,
+  fetchTopRated: `/movie/top_rated?api_key=${API_KEY}&language=en-US`,
+  fetchActionMovies: `/discover/movie?api_key=${API_KEY}&with_genres=28`,
+  fetchComedyMovies: `/discover/movie?api_key=${API_KEY}&with_genres=35`,
+  fetchHorrorMovies: `/discover/movie?api_key=${API_KEY}&with_genres=27`,
+};
+
+export default requests;
+
+```
+
+9) After seeding your firebase database with the movies information & reverting the Github Pages changes you can run the Netflix React App using the following command from your terminal:
 
 ```
 # Run the app
@@ -310,16 +329,17 @@ npm start
 Happy Hacking!
 
 
-<!-- # Author
+# Author
 
-👤 **Ahmed Tohamy**
-- Github: https://github.com/AhmedTohamy01
-- Linkedin: https://www.linkedin.com/in/ATohamy
-- Email: Ahmed-Tohamy@outlook.com -->
+👤 **Tabish Hussain**
+- Github: https://github.com/realgorithm
+<!-- - Linkedin: https://www.linkedin.com/in/ATohamy -->
+- Email: hussaintabish@gmail.com.com
 
 # Show Your Support
 
 Give a ⭐️ if you like this project!
+and any issues or suggestions are welcome.
 
 # Acknowledgments
 
