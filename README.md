@@ -209,6 +209,7 @@ I have built this project using the following tools & techniques:
 - JSX.
 - CSS Modules.
 - Firebase.
+- TMDB API.
 - VSCode.
 - StyleLint.
 - EsLint.

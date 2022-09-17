@@ -1,3 +1,4 @@
+/* eslint-disable import/extensions */
 /* eslint-disable import/no-named-as-default-member */
 /* eslint-disable import/no-named-as-default */
 import React from "react";
@@ -5,6 +6,7 @@ import requests from "../lib/Requests";
 import Row from "../components/row/Row";
 import Banner from "../components/banner/Banner";
 import Nav from "../components/nav/Nav";
+import FooterCompound from "../components/footer/FooterCompound";
 
 function BrowsePage1() {
    const random = Math.round(Math.random() * (5 - 1) + 1);
@@ -22,6 +24,7 @@ function BrowsePage1() {
       <Row title="Action Movies" fetchURL={requests.fetchActionMovies} />
       <Row title="Comedy Movies" fetchURL={requests.fetchComedyMovies} />
       <Row title="Horror Movies" fetchURL={requests.fetchHorrorMovies} />
+      <FooterCompound />
     </div>
   );
 }
