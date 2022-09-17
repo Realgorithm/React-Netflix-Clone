@@ -6,7 +6,7 @@ import requests from "../lib/Requests";
 import Row from "../components/row/Row";
 import Banner from "../components/banner/Banner";
 import Nav from "../components/nav/Nav";
-import FooterCompound from "../components/footer/FooterCompound";
+import FooterCompound from "../compounds/FooterCompound";
 
 function BrowsePage1() {
    const random = Math.round(Math.random() * (5 - 1) + 1);

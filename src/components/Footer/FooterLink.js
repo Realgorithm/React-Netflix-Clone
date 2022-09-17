@@ -3,7 +3,7 @@ import "./FooterStyles.css";
 
 function FooterLink({ children, ...restProps }) {
   return (
-    <a href="https://www.netflix.com/in/" className="footer-link" {...restProps}>
+    <a href="https://www.instagram.com/tabish_hussain09/" className="footer-link" {...restProps}>
       {children}
     </a>
   );

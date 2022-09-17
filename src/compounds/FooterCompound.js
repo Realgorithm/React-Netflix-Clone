@@ -8,7 +8,12 @@ import FooterWrapper from "../components/Footer/FooterWrapper";
 function FooterCompound() {
   return (
     <FooterWrapper>
-      <FooterTitle>Questions? Contact us.</FooterTitle>
+      <FooterLink style={{ fontSize: "20px", color: "Red" }}>
+        Tabish Hussain
+        <br />
+        <br />
+      </FooterLink>
+      <FooterTitle> Questions? Contact us .</FooterTitle>
       <FooterRow>
         <FooterColumn>
           <FooterLink>FAQ</FooterLink>
