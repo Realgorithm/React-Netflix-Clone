@@ -8,7 +8,7 @@ import FooterWrapper from "../components/Footer/FooterWrapper";
 function FooterCompound() {
   return (
     <FooterWrapper>
-      <FooterLink style={{ fontSize: "20px", color: "Red" }}>
+      <FooterLink style={{ fontSize: "24px", color: "Red" }}>
         Tabish Hussain
         <br />
         <br />

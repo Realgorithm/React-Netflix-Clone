@@ -1,0 +1,22 @@
+[{
+    "id": "1",
+    "name": "Saddam",
+    "image": "../images/users/1.png"
+},
+{
+    "id": "2",
+    "name": "Talha",
+    "image": "../images/users/2.png"
+},
+{
+    "id": "3",
+    "name": "Jaadu",
+    "image": "../images/users/3.png"
+},
+{
+    "id": "4",
+    "name": "Nitish",
+    "image": "../images/users/4.png"
+}
+
+]

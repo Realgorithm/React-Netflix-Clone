@@ -12,7 +12,7 @@ import Seperator from "../components/Seperator/Seperator";
 function JumboCompound() {
   return (
     <JumboWrapper>
-      {JumboData.map((item) => (
+      {JumboData.map(item => (
         <>
           <JumboItem key={item.id}>
             <JumboTextWrapper>

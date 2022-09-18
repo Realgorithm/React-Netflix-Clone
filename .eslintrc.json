@@ -4,6 +4,7 @@
     "es6": true,
     "jest": true
   },
+  "parser": "babel-eslint",
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
@@ -29,7 +30,7 @@
     "no-console": "off",
     "linebreak-style": "off",
     "quotes": "off",
-    "arrow-parens": "off",
+    // "arrow-parens": "off",
     "function-paren-newline": "off",
     "comma-dangle": "off",
     "implicit-arrow-linebreak": "off",

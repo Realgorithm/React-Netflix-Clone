@@ -6,6 +6,7 @@ import Logo from "../components/Header/Logo";
 import NavBar from "../components/Header/NavBar";
 import SigninButton from "../components/Header/SigninButton";
 import FeatureSubTitle from "../components/Header/FeatureSubTitle";
+import Warning from "../components/Header/Warning";
 
 function HeaderCompound({ children }) {
   const [show, handleShow] = useState(false);
@@ -33,9 +34,9 @@ function HeaderCompound({ children }) {
         <FeatureSubTitle>
           Watch anywhere. Cancel anytime.
         </FeatureSubTitle>
-        {/* <Warning>
-          This is NOT official Netflix
-        </Warning> */}
+        <Warning>
+          Netflix by Tabish
+        </Warning>
       </FeatureWrapper>
       {children}
     </HeaderWrapper>

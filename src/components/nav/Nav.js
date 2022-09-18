@@ -1,7 +1,8 @@
+/* eslint-disable react/button-has-type */
 import React, { useEffect, useState } from "react";
 import "./Nav.css";
 
-function Nav({ link, photoURL, width }) {
+function Nav({ photoURL, width, ...restProps }) {
   const [show, handleShow] = useState(false);
 
   useEffect(() => {
@@ -22,9 +23,9 @@ function Nav({ link, photoURL, width }) {
         alt="Netflix logo"
         className="nav_logo"
       />
-      <a href={link}>
-        <img src={photoURL} alt="Netflix logo" className="nav_avatar" style={{ width }} />
-      </a>
+      <button {...restProps}>
+        <img src={photoURL} alt="Netflix logo" className="nav_avatar" style={{ width }} {...restProps} />
+      </button>
 
     </div>
   );

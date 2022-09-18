@@ -1,7 +1,9 @@
 import React, { useState, useContext } from "react";
-import { useHistory } from "react-router-dom";
+import { Redirect, useHistory } from "react-router-dom";
+import { AuthContext } from "../lib/Auth";
 import { FirebaseContext } from "../context/FirbaseContext";
 import HeaderWrapper from "../components/Header/HeaderWrapper";
+import Warning from "../components/Header/Warning";
 import Logo from "../components/Header/Logo";
 import NavBar from "../components/Header/NavBar";
 import SignupButton from "../components/Header/SignupButton";
@@ -28,18 +30,21 @@ function SigninPage() {
 
   function handleSubmit(event) {
     event.preventDefault();
-
-    firebase
-      .auth()
-      .signInWithEmailAndPassword(emailAddress, password)
-      .then(() => {
-        setEmailAddress("");
-        setPassword("");
-        history.push("/browse");
-      })
-      .catch((error) => setError(error.message));
+    try {
+      firebase
+        .auth()
+        .signInWithEmailAndPassword(emailAddress, password)
+        .then(() => {
+          setEmailAddress("");
+          setPassword("");
+          history.push("/browse");
+        });
+    } catch (error) { setError(error.message); }
   }
-
+  const { currentUser } = useContext(AuthContext);
+  if (currentUser) {
+    return <Redirect to="/browse" />;
+  }
   return (
     <>
       <HeaderWrapper className="header-wrapper-home">
@@ -49,7 +54,7 @@ function SigninPage() {
         </NavBar>
         <SignFormWrapper>
           <SignFormBase onSubmit={handleSubmit} method="POST">
-            {/* <Warning>NOT official Netflix</Warning> */}
+            <Warning>Netflix by Tabish</Warning>
             <SignFormTitle>Sign In</SignFormTitle>
             {error ? <SignFormError>{error}</SignFormError> : null}
             <SignFormInput

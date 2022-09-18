@@ -7,11 +7,9 @@
   background-color: rgba(0, 0, 0, 0.75);
   border-radius: 5px;
   width: 100%;
-  margin: auto;
   max-width: 450px;
   padding: 10px 68px 40px;
-  margin-bottom: 40px;
-  margin-top: 40px;
+  margin: 40px auto;
 }
 
 @media (max-width: 550px) {

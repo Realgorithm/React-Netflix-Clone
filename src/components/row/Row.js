@@ -1,3 +1,7 @@
+/* eslint-disable import/order */
+/* eslint-disable max-len */
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+/* eslint-disable camelcase */
 import React, { useState, useEffect } from "react";
 import axios from "../../lib/Axios";
 import "./Row.css";
@@ -35,16 +39,16 @@ function Row({ title, fetchURL, isLargeRow }) {
     },
   };
 
-  const handleClick = (movie) => {
+  const handleClick = movie => {
     if (trailerUrl) {
       setTrailerUrl("");
     } else {
       movieTrailer(movie?.name || "")
-        .then((url) => {
+        .then(url => {
           const urlParams = new URLSearchParams(new URL(url).search);
           setTrailerUrl(urlParams.get("v"));
         })
-        .catch((error) => console.log(error));
+        .catch(error => console.log(error));
     }
   };
 
@@ -54,7 +58,7 @@ function Row({ title, fetchURL, isLargeRow }) {
       <h2>{title}</h2>
       <div className="row_posters">
         {/* several row_poster(s) */}
-        {movies.map((movie) => (
+        {movies.map(movie => (
           <img
             className={`row_poster ${isLargeRow && "row_posterLarge"}`}
             key={movie.id}

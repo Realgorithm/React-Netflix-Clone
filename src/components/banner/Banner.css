@@ -4,6 +4,7 @@
     height: 448px;
     background-size: cover;
     background-repeat: no-repeat;
+    margin-bottom: 15px;
   }
   
   .banner_contents {
@@ -35,11 +36,8 @@
     border: none;
     font-weight: 700;
     border-radius: 0.2vw;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding: 0.5rem 2rem;
     margin-right: 1rem;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
     background-color: rgba(51, 51, 51, 0.5);
   }
   

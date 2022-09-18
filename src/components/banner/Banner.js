@@ -13,7 +13,7 @@ function Banner() {
         request.data.results[
           Math.floor(Math.random() * request.data.results.length - 1)
         ]
-      ); // []
+      );
     }
     fetchData();
   }, []);
@@ -21,7 +21,7 @@ function Banner() {
   console.log(movie);
 
   function truncate(str, n) {
-    return str?.length > n ? str.substr(0, n - 1) + "..." : str;
+    return str?.length > n ? `${str.substr(0, n - 1)}...` : str;
   }
 
   return (
@@ -39,8 +39,8 @@ function Banner() {
         </h1>
 
         <div className="banner_buttons">
-          <button className="banner_button">Play</button>
-          <button className="banner_button">My List</button>
+          <button className="banner_button" type="button">Play</button>
+          <button className="banner_button" type="button">My List</button>
         </div>
         {/* Calls the truncate method after 150 words */}
         <h1 className="banner_description">{truncate(movie?.overview, 200)}</h1>

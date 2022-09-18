@@ -10,7 +10,7 @@ function AccordionCompound() {
   return (
     <AccordionWrapper>
       <AccordionTitle>Frequently Asked Questions</AccordionTitle>
-      {FAQData.map((item) => (
+      {FAQData.map(item => (
         <AccordionItem key={item.id}>
           <AccordionHeader>{item.header}</AccordionHeader>
           <AccordionBody>{item.body}</AccordionBody>

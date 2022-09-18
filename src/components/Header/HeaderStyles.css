@@ -10,13 +10,13 @@
 
 }
 
-.header-wrapper-browse {
+/* .header-wrapper-browse {
   background: url("/images/misc/joker1.jpg");
   background-position: center top;
   background-size: cover;
   background-repeat: no-repeat;
   padding: 30px 50px;
-}
+} */
 
 @media (max-width: 550px) {
   .header-wrapper-home,
@@ -24,6 +24,7 @@
     padding: 15px 20px;
   }
 }
+
 
 .navbar-home,
 .navbar-signin {
@@ -33,10 +34,8 @@
   position: fixed;
   z-index: 1;
   justify-content: space-between;
-  margin-right: auto;
-  margin-left: auto;
   transition: all 0.5s ease;
-
+  transition-timing-function: ease-in;
 }
 .nav_black {
   background-color: #111;
@@ -55,7 +54,7 @@
   }
 }
 
-.navbar-browse {
+/* .navbar-browse {
   max-width: 1850px;
   width: 100%;
   display: flex;
@@ -63,7 +62,7 @@
   margin-bottom: 175px;
   margin-right: auto;
   margin-left: auto;
-}
+} */
 
 .logo {
   height: 32px;
