@@ -29,5 +29,6 @@
     right: 20px;
     top: 9px;
     object-fit: contain;
+    /* transform: rotateZ(30deg); */
   }
   

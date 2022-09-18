@@ -35,7 +35,7 @@ function HeaderCompound({ children }) {
           Watch anywhere. Cancel anytime.
         </FeatureSubTitle>
         <Warning>
-          Netflix by Tabish
+          Netflix clone by Tabish
         </Warning>
       </FeatureWrapper>
       {children}

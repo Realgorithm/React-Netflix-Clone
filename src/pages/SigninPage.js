@@ -54,7 +54,7 @@ function SigninPage() {
         </NavBar>
         <SignFormWrapper>
           <SignFormBase onSubmit={handleSubmit} method="POST">
-            <Warning>Netflix by Tabish</Warning>
+            <Warning>Netflix clone by Tabish</Warning>
             <SignFormTitle>Sign In</SignFormTitle>
             {error ? <SignFormError>{error}</SignFormError> : null}
             <SignFormInput

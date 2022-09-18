@@ -11,7 +11,7 @@ function OptFormCompound() {
         Ready to watch? Enter your email to create or restart your membership.
       </OptFormText>
       <OptFormWrapper>
-        <OptFormEmail placeholder="Email Address" />
+        <OptFormEmail placeholder="Email Address" type="email" />
         <OptFormButton>Get Started</OptFormButton>
       </OptFormWrapper>
     </>
