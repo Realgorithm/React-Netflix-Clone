@@ -2,6 +2,7 @@
 import React from 'react';
 import './Profile.css';
 import ProfileData from '../../data/profiles.json';
+import firebase from '../../lib/firebase.prod';
 
 function Profile({ children, random, ...restprops }) {
   const randomIndex = random;
@@ -25,7 +26,7 @@ function Profile({ children, random, ...restprops }) {
       <div className="profile-link">
         <a href="/browse">Account</a>
         <a href="/">Help center</a>
-        <a href="/">Sign out of Netflix</a>
+        <a href="/" onClick={() => firebase.auth().signOut()}>Sign out of Netflix</a>
       </div>
     </div>
   );

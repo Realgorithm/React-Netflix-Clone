@@ -1,5 +1,6 @@
+/* eslint-disable no-alert */
 import React, { useState, useContext } from "react";
-import { Redirect, useHistory } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 import { AuthContext } from "../lib/Auth";
 import { FirebaseContext } from "../context/FirbaseContext";
 import HeaderWrapper from "../components/Header/HeaderWrapper";
@@ -19,12 +20,13 @@ import SignFormWrapper from "../components/SignForm/SignFormWrapper";
 import FooterCompound from "../compounds/FooterCompound";
 
 function SigninPage() {
-  const history = useHistory();
+  // const history = useHistory();
   const { firebase } = useContext(FirebaseContext);
 
   const [emailAddress, setEmailAddress] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const { currentUser } = useContext(AuthContext);
 
   const IsInvalid = password === "" || emailAddress === "";
 
@@ -37,11 +39,10 @@ function SigninPage() {
         .then(() => {
           setEmailAddress("");
           setPassword("");
-          history.push("/browse");
-        });
-    } catch (error) { setError(error.message); }
+          // history.push("/browse");
+        }).catch(error => setError(error.message));
+    } catch (error) { setError(); }
   }
-  const { currentUser } = useContext(AuthContext);
   if (currentUser) {
     return <Redirect to="/browse" />;
   }

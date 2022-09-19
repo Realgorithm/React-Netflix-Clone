@@ -1,5 +1,6 @@
+/* eslint-disable no-alert */
 import React, { useState, useContext } from "react";
-import { Redirect, useHistory } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 import { FirebaseContext } from "../context/FirbaseContext";
 import HeaderWrapper from "../components/Header/HeaderWrapper";
 import NavBar from "../components/Header/NavBar";
@@ -17,7 +18,7 @@ import SignFormCaptcha from "../components/SignForm/SignFormCaptcha";
 import SignFormError from "../components/SignForm/SignFormError";
 
 function SignupPage() {
-  const history = useHistory();
+  // const history = useHistory();
   const { firebase } = useContext(FirebaseContext);
 
   const [firstName, setFirstName] = useState("");
@@ -43,11 +44,11 @@ function SignupPage() {
               setFirstName("");
               setEmailAddress("");
               setPassword("");
-              history.push("/browse");
-            })
-        );
+              // history.push("/browse");
+            }))
+        .catch(error => setError(error.message));
       setCurrentUser(true);
-    } catch (error) { setError(error.message); }
+    } catch (error) { setError(); }
   }
   if (currentUser) {
     return <Redirect to="/browse" />;
@@ -63,7 +64,7 @@ function SignupPage() {
           <SignFormBase onSubmit={handleSubmit} method="POST">
             <Warning>Netflix clone by Tabish</Warning>
             <SignFormTitle>Sign Up</SignFormTitle>
-            {error ? <SignFormError>{error}</SignFormError> : null}
+            {error ? <SignFormError>{error.message}</SignFormError> : null}
             <SignFormInput
               type="text"
               placeholder="First Name"

@@ -25,10 +25,14 @@
   }
   
   .nav_avatar {
-    position: fixed;
+    position:fixed;
     right: 20px;
     top: 9px;
     object-fit: contain;
-    /* transform: rotateZ(30deg); */
+    transition: tranform 45ms;
+  }
+  .nav_avatar:hover{
+    transform:rotate(56deg);
+    
   }
   
