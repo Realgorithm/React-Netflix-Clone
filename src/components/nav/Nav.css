@@ -29,10 +29,6 @@
     right: 20px;
     top: 9px;
     object-fit: contain;
-    transition: tranform 45ms;
   }
-  .nav_avatar:hover{
-    transform:rotate(56deg);
-    
-  }
+ 
   
