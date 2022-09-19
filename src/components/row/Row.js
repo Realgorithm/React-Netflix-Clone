@@ -1,3 +1,4 @@
+/* eslint-disable no-lone-blocks */
 /* eslint-disable import/order */
 /* eslint-disable max-len */
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
@@ -23,6 +24,7 @@ function Row({ title, fetchURL, isLargeRow }) {
     async function fetchData() {
       const request = await axios.get(fetchURL);
       // "https://api.themoviedb.org/3/discover/tv?api-key=${API_KEY}&with_networks=213"
+      // { console.log(request.data.results); }
       setMovies(request.data.results);
       return request;
     }
@@ -43,7 +45,7 @@ function Row({ title, fetchURL, isLargeRow }) {
     if (trailerUrl) {
       setTrailerUrl("");
     } else {
-      movieTrailer(movie?.name || "")
+      movieTrailer(movie?.name || "" || movie?.title || movie?.original_title || movie?.homepage)
         .then(url => {
           const urlParams = new URLSearchParams(new URL(url).search);
           setTrailerUrl(urlParams.get("v"));
@@ -70,6 +72,7 @@ function Row({ title, fetchURL, isLargeRow }) {
           />
         ))}
       </div>
+      {console.log(trailerUrl)}
       {trailerUrl && (
         <YouTube className="video_container" videoId={trailerUrl} opts={opts} />
       )}

@@ -22,7 +22,6 @@ function BrowsePage() {
   return (
     <div className="app">
       <Nav photoURL={`./images/users/${random}.png`} width="30px" onClick={() => setShowProfile(showProfile === "true" ? "false" : "true")} />
-      {console.log(showProfile)}
       {showProfile === "true" ? <Profile random={random} onClick={() => setShowProfile(false)} /> : null}
       <Banner />
       <Row
