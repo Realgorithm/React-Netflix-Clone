@@ -336,7 +336,7 @@ Happy Hacking!
 👤 **Tabish Hussain**
 - Github: https://github.com/realgorithm
 <!-- - Linkedin: https://www.linkedin.com/in/ATohamy -->
-- Email: hussaintabish@gmail.com.com
+- Email: hussaintabish0618@gmail.com
 
 # Show Your Support
 
